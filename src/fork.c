@@ -75,6 +75,7 @@ int born(general_t *mp, char **env)
             moov(mp, env);
         if (my_strncmp(mp->token, "setenv", 6) == 0) {
             print_env(env);
+            return 0;
         } else if (my_strncmp(mp->token, "unsetenv", 8) == 0){
             return 0;
         } else {
